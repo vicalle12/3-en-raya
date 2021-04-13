@@ -40,7 +40,7 @@ class CreateUserUseCaseTest extends TestCase
         $userRequest = CreateUserRequestMother::fromUser($user);
 
         $this->userRepository
-            ->create(Argument::type(User::class))
+            ->save(Argument::type(User::class))
             ->shouldBeCalledOnce();
 
         $this->eventBus->publish(Argument::type(CreateUserEvent::class))

@@ -9,7 +9,7 @@ use App\Acme\Users\Domain\Entities\User;
 
 interface UserRepository
 {
-    public function create(User $user): void;
+    public function save(User $user): void;
 
     public function findBy(UserId $userId): ?User;
 

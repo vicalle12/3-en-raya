@@ -27,7 +27,7 @@ final class CreateUserUseCase
             new UserName($createUserRequest->getUsername())
         );
 
-        $this->userRepository->create($user);
+        $this->userRepository->save($user);
 
         $this->bus->publish(...$user->pullDomainEvents());
     }
