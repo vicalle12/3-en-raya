@@ -47,6 +47,7 @@ class CreateUserUseCaseTest extends TestCase
             ->shouldBeCalledOnce();
 
         $this->sub->__invoke($userRequest);
+        self::assertTrue(true);
     }
 
     public function testCreateUserWrongUserRequest(): void
