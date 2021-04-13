@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  tic_tac_php:
+    container_name: tic_tac_php
+    build:
+      context: ..
+      dockerfile: dockers/Dockerfile
+    restart: unless-stopped
+    ports:
+      - "8061:8040"
+      - "9061:9001"
+    volumes:
+      - ..:/var/www/app:delegated
+    command: symfony serve --dir=public --port=8040 --force-php-discovery
