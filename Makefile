@@ -7,7 +7,7 @@ build:
 install:
 	@$(COMPOSE) build
 	@$(COMPOSE) up -d  --remove-orphans
-	# @make composer-install
+	@make composer-install
 
 stop:
 	@$(COMPOSE) stop
