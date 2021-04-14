@@ -6,6 +6,7 @@ namespace App\Acme\Games\Application\UseCases;
 
 use App\Acme\Games\Application\Request\StartGameRequest;
 use App\Acme\Games\Domain\Entities\Game;
+use App\Acme\Games\Domain\Exceptions\UserNotFound;
 use App\Acme\Games\Domain\Repositories\GameRepository;
 use App\Acme\Games\Domain\Repositories\UserRepository;
 use App\Acme\Shared\Domain\Entities\GameId;
@@ -29,7 +30,14 @@ final class StartGameUseCase
         $second = (!$randomPosition) ? $gameRequest->getUserIdOne() : $gameRequest->getUserIdTwo();
 
         $user1 = $this->userRepository->findBy(new UserId($first));
+        if (empty($user1)) {
+            throw new UserNotFound($first);
+        }
+
         $user2 = $this->userRepository->findBy(new UserId($second));
+        if (empty($user2)) {
+            throw new UserNotFound($second);
+        }
 
         $game = Game::create(
             new GameId($gameRequest->getGameId()),

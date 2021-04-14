@@ -7,6 +7,7 @@ use App\Acme\Games\Application\Request\StartGameRequest;
 use App\Acme\Games\Application\UseCases\StartGameUseCase;
 use App\Acme\Games\Domain\Entities\Game;
 use App\Acme\Games\Domain\Events\StartGameEvent;
+use App\Acme\Games\Domain\Exceptions\UserNotFound;
 use App\Acme\Games\Domain\Repositories\GameRepository;
 use App\Acme\Games\Domain\Repositories\UserRepository;
 use App\Shared\Domain\Bus\Event\EventBus;
@@ -54,6 +55,21 @@ class StartGameUseCaseTest extends TestCase
 
         $this->eventBus->publish(Argument::type(StartGameEvent::class))
             ->shouldBeCalledOnce();
+
+        $this->sub->__invoke(StartGameRequestMother::fromGame($game));
+    }
+
+    public function testStartGameButUserNotFound(): void
+    {
+        self::expectException(UserNotFound::class);
+
+        $game = GameMother::random();
+
+        $this->userRepository->findBy($game->getUser1()->getId())
+            ->willReturn(null);
+
+        $this->userRepository->findBy($game->getUser2()->getId())
+            ->willReturn(null);
 
         $this->sub->__invoke(StartGameRequestMother::fromGame($game));
     }
