@@ -1,9 +1,8 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Tests\Unit\Acme\Game\Application\UseCases;
+namespace App\Tests\Unit\Acme\Games\Application\UseCases;
 
-use App\Acme\Games\Application\Request\StartGameRequest;
 use App\Acme\Games\Application\UseCases\StartGameUseCase;
 use App\Acme\Games\Domain\Entities\Game;
 use App\Acme\Games\Domain\Events\StartGameEvent;

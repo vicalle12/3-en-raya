@@ -5,13 +5,10 @@ namespace App\Acme\Games\Application\UseCases;
 
 
 use App\Acme\Games\Application\Request\UserMakesMoveRequest;
-use App\Acme\Games\Domain\Entities\Board;
 use App\Acme\Games\Domain\Entities\BoardPosition;
 use App\Acme\Games\Domain\Entities\UserMovement;
 use App\Acme\Games\Domain\Exceptions\GameNotFound;
-use App\Acme\Games\Domain\Exceptions\UserCantMove;
 use App\Acme\Games\Domain\Exceptions\UserNotFound;
-use App\Acme\Games\Domain\Exceptions\UserNotPlayingThisGame;
 use App\Acme\Games\Domain\Repositories\GameRepository;
 use App\Acme\Games\Domain\Repositories\UserRepository;
 use App\Acme\Shared\Domain\Entities\GameId;
