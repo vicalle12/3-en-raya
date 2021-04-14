@@ -5,6 +5,7 @@ namespace App\Acme\Games\Domain\Entities;
 
 
 use App\Acme\Games\Domain\Events\StartGameEvent;
+use App\Acme\Games\Domain\Exceptions\UserCantMove;
 use App\Acme\Shared\Domain\Entities\GameId;
 use App\Shared\Domain\Aggregate\AggregateRoot;
 
@@ -51,8 +52,47 @@ final class Game extends AggregateRoot
         return $this->user2;
     }
 
-    public function getBoard(): Board
+    public function move(UserMovement $movement): void
     {
-        return $this->board;
+        if (!$this->userCanMove($movement->getUser())) {
+            var_dump($this->board->isFull(), $this->board->value);
+            throw new UserCantMove($movement->getUser()->getId()->value());
+        }
+
+        $this->board->addMovement($movement);
+    }
+
+    public function isFinished(): bool
+    {
+        return !empty($this->getWinner()) || $this->board->isFull();
+    }
+
+    public function getWinner(): ?User
+    {
+        return $this->board->getWinner();
+    }
+
+    private function nextMoveUser(): User
+    {
+        $lastMove = $this->board->lastMove();
+
+        if (!empty($lastMove) && $lastMove->getUser()->equals($this->user1)) {
+            return $this->user2;
+        }
+
+        return $this->user1;
+    }
+
+    private function userIsPlaying(User $user): bool
+    {
+        return $user->getId()->equals($this->getUser1()->getId()) || $user->getId()->equals($this->getUser2()->getId());
+    }
+
+    private function userCanMove(User $user): bool
+    {
+        return
+            $this->userIsPlaying($user) &&
+            $this->nextMoveUser()->equals($user) &&
+            !$this->isFinished();
     }
 }

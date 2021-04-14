@@ -70,4 +70,24 @@ class UserMakesMoveUseCaseTest extends TestCase
             BoardPosition::randomValue()
         ));
     }
+
+    public function testUserNotPlayingThisGame(): void
+    {
+
+    }
+
+    public function testUserCanNotMove(): void
+    {
+
+    }
+
+    public function testInvalidMovement(): void
+    {
+
+    }
+
+    public function testMovementRepeated(): void
+    {
+
+    }
 }

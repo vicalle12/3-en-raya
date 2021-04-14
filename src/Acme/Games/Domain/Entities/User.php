@@ -16,4 +16,9 @@ final class User
     {
         return $this->id;
     }
+
+    public function equals(?User $user): bool
+    {
+        return !empty($user) && $user->getId()->equals($this->getId());
+    }
 }
