@@ -22,12 +22,12 @@ Execute the following command, and you will be able to play the game reading the
 > make app
 
 Consider the happy scenario:
-> create user for player 1
-> create user for player 2
-> start game setting the generated player ids.
-> first player will be randomly selected
-> next user id will be displayed as a message
-> introduce the board positions choosing from 0 to 8
+- create user for player 1
+- create user for player 2
+- start game setting the generated player ids.
+- first player will be randomly selected
+- next user id will be displayed as a message
+- introduce the board positions choosing from 0 to 8
 
 Board positions:
 
