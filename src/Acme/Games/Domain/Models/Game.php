@@ -55,7 +55,6 @@ final class Game extends AggregateRoot
     public function move(UserMovement $movement): void
     {
         if (!$this->userCanMove($movement->getUser())) {
-            var_dump($this->board->isFull(), $this->board->value);
             throw new UserCantMove($movement->getUser()->getId()->value());
         }
 

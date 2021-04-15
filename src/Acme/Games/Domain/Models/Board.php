@@ -8,7 +8,7 @@ use App\Acme\Games\Domain\Exceptions\UserCantMove;
 
 final class Board
 {
-    public array $value;
+    private array $value;
 
     // Could be improved by an decision algorithm
     const WINNING_POSITIONS = [

@@ -38,7 +38,8 @@
         "psr-4": {
             "App\\Tests\\": "tests/",
             "App\\Tests\\Unit\\": "tests/unit",
-            "App\\Tests\\Functional\\": "tests/functional"
+            "App\\Tests\\Functional\\": "tests/functional",
+            "Apps\\TicTacToe\\Src\\Cli\\": "apps/tic-tac-toe/src/CLI"
         }
     },
     "replace": {
@@ -48,15 +49,7 @@
     },
     "scripts": {
         "auto-scripts": {
-            "cache:clear": "symfony-cmd",
-            "assets:install %PUBLIC_DIR%": "symfony-cmd"
-        },
-        "post-install-cmd": [
-            "@auto-scripts"
-        ],
-        "post-update-cmd": [
-            "@auto-scripts"
-        ]
+        }
     },
     "conflict": {
         "symfony/symfony": "*"

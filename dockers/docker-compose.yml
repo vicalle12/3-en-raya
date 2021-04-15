@@ -12,4 +12,4 @@ services:
       - "9061:9001"
     volumes:
       - ..:/var/www/app:delegated
-    command: symfony serve --dir=public --port=8040 --force-php-discovery
+    command: symfony serve --dir=apps/tic-tac-toe/public --port=8040 --force-php-discovery

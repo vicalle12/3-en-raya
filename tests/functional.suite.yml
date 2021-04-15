@@ -9,6 +9,7 @@ actor: FunctionalTester
 modules:
     enabled:
         - Symfony:
-            app_path: 'src'
+            app_path: 'apps/tic-tac-toe/src'
             environment: 'test'
+            kernel_class: 'Apps\TicTacToe\Src\Kernel'
         - \App\Tests\Helper\Functional
