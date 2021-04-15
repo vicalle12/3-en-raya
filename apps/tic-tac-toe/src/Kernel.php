@@ -2,7 +2,6 @@
 
 namespace Apps\TicTacToe\Src;
 
-use Behat\Gherkin\Loader\LoaderInterface;
 use Symfony\Bundle\FrameworkBundle\Kernel\MicroKernelTrait;
 use Symfony\Component\Config\Loader\DelegatingLoader;
 use Symfony\Component\Config\Resource\FileResource;

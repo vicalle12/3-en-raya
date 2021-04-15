@@ -40,5 +40,7 @@ final class UserMakesMoveUseCase
         $movement = new UserMovement($user, new BoardPosition($userMakesMoveRequest->getPositionKey()));
 
         $game->move($movement);
+
+        $this->gameRepository->save($game);
     }
 }

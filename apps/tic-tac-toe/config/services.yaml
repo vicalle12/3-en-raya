@@ -3,6 +3,11 @@
 
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
+
+imports:
+    - { resource: ../../../src/Acme/Users/Infrastructure/DependencyInjection/* }
+    - { resource: ../../../src/Acme/Games/Infrastructure/DependencyInjection/* }
+
 parameters:
 
 services:
@@ -10,3 +15,18 @@ services:
     _defaults:
         autowire: true      # Automatically injects dependencies in your services.
         autoconfigure: true # Automatically Gamregisters your services as commands, event subscribers, etc.
+
+    _instanceof:
+        App\Shared\Domain\Bus\Event\DomainEventSubscriber:
+            tags: [ 'ap.domain_event_subscriber' ]
+
+
+    Apps\TicTacToe\Src\CLI\StartTicTacToeGameCli:
+        tags:
+            - { name: 'console.command', command: 'app:tictactoe' }
+
+
+    App\Shared\Domain\Bus\Event\EventBus:
+        class: App\Shared\Infrastructure\Bus\Event\InMemory\InMemorySymfonyEventBus
+
+    App\Shared\Infrastructure\Bus\Event\InMemory\InMemorySymfonyEventBus: ~

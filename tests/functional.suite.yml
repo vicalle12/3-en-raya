@@ -13,3 +13,4 @@ modules:
             environment: 'test'
             kernel_class: 'Apps\TicTacToe\Src\Kernel'
         - \App\Tests\Helper\Functional
+        - Cli

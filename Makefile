@@ -21,5 +21,8 @@ composer-install:
 bash:
 	@$(COMPOSE) exec tic_tac_php bash
 
+app:
+	@$(COMPOSE) exec tic_tac_php apps/tic-tac-toe/bin/console app:tictactoe
+
 test:
 	@$(COMPOSE) exec tic_tac_php php vendor/bin/codecept run tests

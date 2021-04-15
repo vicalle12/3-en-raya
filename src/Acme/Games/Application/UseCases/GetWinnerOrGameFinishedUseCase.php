@@ -21,7 +21,8 @@ final class GetWinnerOrGameFinishedUseCase
 
         return new GetWinnerOrGameFinishedResponse(
             $game->getWinner() ? $game->getWinner()->getId()->value() : null,
-            $game->isFinished()
+            $game->isFinished(),
+            $game->nextMoveUser()->getId()->value()
         );
     }
 }

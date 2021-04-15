@@ -1,21 +1,21 @@
 <?php
-declare(strict_types=1);
 
 namespace App\Tests\Unit\Acme\Games\Application\UseCases;
 
 use App\Acme\Games\Application\Request\UserMakesMoveRequest;
 use App\Acme\Games\Application\UseCases\UserMakesMoveUseCase;
-use App\Acme\Games\Domain\Models\BoardPosition;
-use App\Acme\Games\Domain\Models\UserMovement;
 use App\Acme\Games\Domain\Exceptions\GameNotFound;
 use App\Acme\Games\Domain\Exceptions\UserCantMove;
 use App\Acme\Games\Domain\Exceptions\UserNotFound;
+use App\Acme\Games\Domain\Models\BoardPosition;
+use App\Acme\Games\Domain\Models\Game;
+use App\Acme\Games\Domain\Models\UserMovement;
 use App\Acme\Games\Domain\Repositories\GameRepository;
 use App\Acme\Games\Domain\Repositories\UserRepository;
-use App\Shared\Domain\ValueObject\Enum;
 use App\Tests\ObjectMothers\Acme\Games\Domain\Models\GameMother;
 use App\Tests\ObjectMothers\Acme\Games\Domain\Models\UserMother;
 use PHPUnit\Framework\TestCase;
+use Prophecy\Argument;
 use Prophecy\PhpUnit\ProphecyTrait;
 
 class UserMakesMoveUseCaseTest extends TestCase
@@ -164,6 +164,9 @@ class UserMakesMoveUseCaseTest extends TestCase
 
         $this->gameRepository->findBy($game->getId())
             ->willReturn($game);
+
+        $this->gameRepository->save(Argument::type(Game::class))
+            ->shouldBeCalled();
 
         $this->sub->__invoke(new UserMakesMoveRequest(
             $game->getId()->value(),

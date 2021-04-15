@@ -1,0 +1,15 @@
+services:
+  App\Acme\Games\Application\UseCases\StartGameUseCase:
+    arguments:
+      - '@App\Acme\Games\Domain\Repositories\UserRepository'
+      - '@App\Acme\Games\Domain\Repositories\GameRepository'
+      - '@App\Shared\Domain\Bus\Event\EventBus'
+
+  App\Acme\Games\Application\UseCases\UserMakesMoveUseCase:
+    arguments:
+      - '@App\Acme\Games\Domain\Repositories\UserRepository'
+      - '@App\Acme\Games\Domain\Repositories\GameRepository'
+
+  App\Acme\Games\Application\UseCases\GetWinnerOrGameFinishedUseCase:
+    arguments:
+      - '@App\Acme\Games\Domain\Repositories\GameRepository'

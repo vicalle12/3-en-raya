@@ -71,7 +71,7 @@ final class Game extends AggregateRoot
         return $this->board->getWinner();
     }
 
-    private function nextMoveUser(): User
+    public function nextMoveUser(): User
     {
         $lastMove = $this->board->lastMove();
 

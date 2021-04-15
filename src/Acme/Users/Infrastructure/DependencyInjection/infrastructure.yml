@@ -1,0 +1,3 @@
+services:
+  App\Acme\Users\Domain\Repositories\UserRepository:
+    class: App\Acme\Users\Infrastructure\Persistence\MemoryUserRepository

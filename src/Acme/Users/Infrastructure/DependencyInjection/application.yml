@@ -1,0 +1,12 @@
+services:
+  App\Acme\Users\Application\UseCases\CreateUserUseCase:
+    arguments:
+      - '@App\Acme\Users\Domain\Repositories\UserRepository'
+      - '@App\Shared\Domain\Bus\Event\EventBus'
+  App\Acme\Users\Application\UseCases\FindUserUseCase:
+    arguments:
+      - '@App\Acme\Users\Domain\Repositories\UserRepository'
+
+  App\Acme\Users\Application\UseCases\DeleteUserUseCase:
+    arguments:
+      - '@App\Acme\Users\Domain\Repositories\UserRepository'

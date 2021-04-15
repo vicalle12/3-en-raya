@@ -13,11 +13,13 @@
         "symfony/dotenv": "5.2.*",
         "symfony/flex": "^1.3.1",
         "symfony/framework-bundle": "5.2.*",
+        "symfony/messenger": "5.2.*",
         "symfony/yaml": "5.2.*"
     },
     "require-dev": {
         "codeception/codeception": "^4.1",
         "codeception/module-asserts": "^1.3",
+        "codeception/module-cli": "^1.1",
         "codeception/module-symfony": "^2.0",
         "phpspec/prophecy-phpunit": "^2.0",
         "ramsey/uuid": "^4.1"
@@ -39,7 +41,7 @@
             "App\\Tests\\": "tests/",
             "App\\Tests\\Unit\\": "tests/unit",
             "App\\Tests\\Functional\\": "tests/functional",
-            "Apps\\TicTacToe\\Src\\Cli\\": "apps/tic-tac-toe/src/CLI"
+            "Apps\\TicTacToe\\Src\\": "apps/tic-tac-toe/src"
         }
     },
     "replace": {

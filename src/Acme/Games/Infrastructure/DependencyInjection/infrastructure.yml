@@ -1,0 +1,7 @@
+services:
+  App\Acme\Games\Domain\Repositories\GameRepository:
+    class: App\Acme\Games\Infrastructure\Persistence\MemoryGameRepository
+  App\Acme\Games\Domain\Repositories\UserRepository:
+    class: App\Acme\Games\Infrastructure\Persistence\BusUserRepository
+    arguments:
+      - '@App\Acme\Users\Application\UseCases\FindUserUseCase'

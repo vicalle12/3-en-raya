@@ -16,13 +16,13 @@ class InMemorySymfonyEventBus implements EventBus
 {
     private MessageBus $bus;
 
-    public function __construct(iterable $subscribers)
+    public function __construct()
     {
         $this->bus = new MessageBus(
             [
                 new HandleMessageMiddleware(
                     new HandlersLocator(
-                        CallableFirstParameterExtractor::forPipedCallables($subscribers)
+                        CallableFirstParameterExtractor::forPipedCallables([])
                     )
                 ),
             ]

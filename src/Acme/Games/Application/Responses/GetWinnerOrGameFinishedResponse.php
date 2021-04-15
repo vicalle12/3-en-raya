@@ -9,7 +9,8 @@ final class GetWinnerOrGameFinishedResponse
 {
     public function __construct(
         private ?string $winnerId,
-        private bool $isGameFinished
+        private bool $isGameFinished,
+        private ?string $nextPlayerId
     )
     {
     }
@@ -22,5 +23,10 @@ final class GetWinnerOrGameFinishedResponse
     public function isGameFinished(): bool
     {
         return $this->isGameFinished;
+    }
+
+    public function getNextPlayerId(): ?string
+    {
+        return $this->nextPlayerId;
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-use Apps\TicTacToe\Kernel;
+use Apps\TicTacToe\Src\Kernel;
 use Symfony\Component\ErrorHandler\Debug;
 use Symfony\Component\HttpFoundation\Request;
 
