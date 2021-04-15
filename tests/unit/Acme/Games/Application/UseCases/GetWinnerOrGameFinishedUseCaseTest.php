@@ -5,11 +5,11 @@ namespace App\Tests\Unit\Acme\Games\Application\UseCases;
 
 use App\Acme\Games\Application\Request\GetWinnerOrGameFinishedRequest;
 use App\Acme\Games\Application\UseCases\GetWinnerOrGameFinishedUseCase;
-use App\Acme\Games\Domain\Entities\BoardPosition;
-use App\Acme\Games\Domain\Entities\UserMovement;
+use App\Acme\Games\Domain\Models\BoardPosition;
+use App\Acme\Games\Domain\Models\UserMovement;
 use App\Acme\Games\Domain\Repositories\GameRepository;
-use App\Tests\ObjectMothers\Acme\Games\Domain\Entities\GameMother;
-use App\Tests\ObjectMothers\Acme\Games\Domain\Entities\UserMother;
+use App\Tests\ObjectMothers\Acme\Games\Domain\Models\GameMother;
+use App\Tests\ObjectMothers\Acme\Games\Domain\Models\UserMother;
 use PHPUnit\Framework\TestCase;
 use Prophecy\PhpUnit\ProphecyTrait;
 

@@ -1,15 +1,15 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Tests\ObjectMothers\Acme\Games\Domain\Entities;
+namespace App\Tests\ObjectMothers\Acme\Games\Domain\Models;
 
 
-use App\Acme\Games\Domain\Entities\Board;
-use App\Acme\Games\Domain\Entities\BoardPosition;
-use App\Acme\Games\Domain\Entities\Game;
-use App\Acme\Games\Domain\Entities\User;
-use App\Acme\Games\Domain\Entities\UserMovement;
-use App\Acme\Shared\Domain\Entities\GameId;
+use App\Acme\Games\Domain\Models\Board;
+use App\Acme\Games\Domain\Models\BoardPosition;
+use App\Acme\Games\Domain\Models\Game;
+use App\Acme\Games\Domain\Models\User;
+use App\Acme\Games\Domain\Models\UserMovement;
+use App\Acme\Shared\Domain\Models\GameId;
 use App\Shared\Domain\ValueObject\Enum;
 use Faker\Factory;
 

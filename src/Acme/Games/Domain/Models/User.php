@@ -1,10 +1,10 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Acme\Games\Domain\Entities;
+namespace App\Acme\Games\Domain\Models;
 
 
-use App\Acme\Shared\Domain\Entities\UserId;
+use App\Acme\Shared\Domain\Models\UserId;
 
 final class User
 {

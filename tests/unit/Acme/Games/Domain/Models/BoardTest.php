@@ -1,15 +1,15 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Tests\Unit\Acme\Games\Domain\Entities;
+namespace App\Tests\Unit\Acme\Games\Domain\Models;
 
-use App\Acme\Games\Domain\Entities\Board;
-use App\Acme\Games\Domain\Entities\BoardPosition;
-use App\Acme\Games\Domain\Entities\UserMovement;
+use App\Acme\Games\Domain\Models\Board;
+use App\Acme\Games\Domain\Models\BoardPosition;
+use App\Acme\Games\Domain\Models\UserMovement;
 use App\Acme\Games\Domain\Exceptions\UserCantMove;
 use App\Shared\Domain\ValueObject\Enum;
-use App\Tests\ObjectMothers\Acme\Games\Domain\Entities\UserMother;
-use App\Tests\ObjectMothers\Acme\Games\Domain\Entities\UserMovementMother;
+use App\Tests\ObjectMothers\Acme\Games\Domain\Models\UserMother;
+use App\Tests\ObjectMothers\Acme\Games\Domain\Models\UserMovementMother;
 use PHPUnit\Framework\TestCase;
 
 class BoardTest extends TestCase

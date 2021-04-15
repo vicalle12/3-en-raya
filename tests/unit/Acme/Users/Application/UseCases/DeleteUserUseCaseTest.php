@@ -3,11 +3,11 @@ declare(strict_types=1);
 
 namespace App\Tests\Unit\Acme\Users\Application\UseCases;
 
-use App\Acme\Shared\Domain\Entities\UserId;
+use App\Acme\Shared\Domain\Models\UserId;
 use App\Acme\Users\Application\UseCases\DeleteUserUseCase;
 use App\Acme\Users\Domain\Exceptions\UserNotFound;
 use App\Acme\Users\Domain\Repositories\UserRepository;
-use App\Tests\ObjectMothers\Acme\Users\Domain\Entities\UserMother;
+use App\Tests\ObjectMothers\Acme\Users\Domain\Models\UserMother;
 use Faker\Factory;
 use PHPUnit\Framework\TestCase;
 use Prophecy\Argument;

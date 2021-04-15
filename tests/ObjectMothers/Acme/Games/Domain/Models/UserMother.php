@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Tests\ObjectMothers\Acme\Games\Domain\Entities;
+namespace App\Tests\ObjectMothers\Acme\Games\Domain\Models;
 
 
-use App\Acme\Games\Domain\Entities\User;
-use App\Acme\Shared\Domain\Entities\UserId;
+use App\Acme\Games\Domain\Models\User;
+use App\Acme\Shared\Domain\Models\UserId;
 use Faker\Factory;
 
 final class UserMother

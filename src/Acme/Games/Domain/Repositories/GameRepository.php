@@ -4,8 +4,8 @@ declare(strict_types=1);
 namespace App\Acme\Games\Domain\Repositories;
 
 
-use App\Acme\Games\Domain\Entities\Game;
-use App\Acme\Shared\Domain\Entities\GameId;
+use App\Acme\Games\Domain\Models\Game;
+use App\Acme\Shared\Domain\Models\GameId;
 
 interface GameRepository
 {

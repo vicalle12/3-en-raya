@@ -4,10 +4,10 @@
 namespace App\Acme\Users\Application\UseCases;
 
 
-use App\Acme\Shared\Domain\Entities\UserId;
+use App\Acme\Shared\Domain\Models\UserId;
 use App\Acme\Users\Application\Requests\CreateUserRequest;
-use App\Acme\Users\Domain\Entities\User;
-use App\Acme\Users\Domain\Entities\UserName;
+use App\Acme\Users\Domain\Models\User;
+use App\Acme\Users\Domain\Models\UserName;
 use App\Acme\Users\Domain\Repositories\UserRepository;
 use App\Shared\Domain\Bus\Event\EventBus;
 

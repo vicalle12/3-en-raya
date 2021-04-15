@@ -5,7 +5,7 @@ namespace App\Tests\ObjectMothers\Acme\Games\Application\Requests;
 
 
 use App\Acme\Games\Application\Request\StartGameRequest;
-use App\Acme\Games\Domain\Entities\Game;
+use App\Acme\Games\Domain\Models\Game;
 
 final class StartGameRequestMother
 {

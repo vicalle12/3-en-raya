@@ -1,10 +1,10 @@
 <?php
 
 
-namespace App\Acme\Users\Domain\Entities;
+namespace App\Acme\Users\Domain\Models;
 
 
-use App\Acme\Shared\Domain\Entities\UserId;
+use App\Acme\Shared\Domain\Models\UserId;
 use App\Acme\Users\Domain\Events\CreateUserEvent;
 use App\Shared\Domain\Aggregate\AggregateRoot;
 

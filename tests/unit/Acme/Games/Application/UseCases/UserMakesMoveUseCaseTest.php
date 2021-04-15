@@ -5,16 +5,16 @@ namespace App\Tests\Unit\Acme\Games\Application\UseCases;
 
 use App\Acme\Games\Application\Request\UserMakesMoveRequest;
 use App\Acme\Games\Application\UseCases\UserMakesMoveUseCase;
-use App\Acme\Games\Domain\Entities\BoardPosition;
-use App\Acme\Games\Domain\Entities\UserMovement;
+use App\Acme\Games\Domain\Models\BoardPosition;
+use App\Acme\Games\Domain\Models\UserMovement;
 use App\Acme\Games\Domain\Exceptions\GameNotFound;
 use App\Acme\Games\Domain\Exceptions\UserCantMove;
 use App\Acme\Games\Domain\Exceptions\UserNotFound;
 use App\Acme\Games\Domain\Repositories\GameRepository;
 use App\Acme\Games\Domain\Repositories\UserRepository;
 use App\Shared\Domain\ValueObject\Enum;
-use App\Tests\ObjectMothers\Acme\Games\Domain\Entities\GameMother;
-use App\Tests\ObjectMothers\Acme\Games\Domain\Entities\UserMother;
+use App\Tests\ObjectMothers\Acme\Games\Domain\Models\GameMother;
+use App\Tests\ObjectMothers\Acme\Games\Domain\Models\UserMother;
 use PHPUnit\Framework\TestCase;
 use Prophecy\PhpUnit\ProphecyTrait;
 

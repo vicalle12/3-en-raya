@@ -7,7 +7,7 @@ namespace App\Acme\Games\Application\UseCases;
 use App\Acme\Games\Application\Request\GetWinnerOrGameFinishedRequest;
 use App\Acme\Games\Application\Responses\GetWinnerOrGameFinishedResponse;
 use App\Acme\Games\Domain\Repositories\GameRepository;
-use App\Acme\Shared\Domain\Entities\GameId;
+use App\Acme\Shared\Domain\Models\GameId;
 
 final class GetWinnerOrGameFinishedUseCase
 {

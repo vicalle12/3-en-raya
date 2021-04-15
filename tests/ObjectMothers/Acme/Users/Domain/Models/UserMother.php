@@ -1,13 +1,13 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Tests\ObjectMothers\Acme\Users\Domain\Entities;
+namespace App\Tests\ObjectMothers\Acme\Users\Domain\Models;
 
 
-use App\Acme\Shared\Domain\Entities\UserId;
-use App\Acme\Users\Domain\Entities\OtherData;
-use App\Acme\Users\Domain\Entities\User;
-use App\Acme\Users\Domain\Entities\UserName;
+use App\Acme\Shared\Domain\Models\UserId;
+use App\Acme\Users\Domain\Models\OtherData;
+use App\Acme\Users\Domain\Models\User;
+use App\Acme\Users\Domain\Models\UserName;
 use Faker\Factory;
 
 

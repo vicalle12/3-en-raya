@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Acme\Games\Domain\Entities;
+namespace App\Acme\Games\Domain\Models;
 
 
 final class UserMovement

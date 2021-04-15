@@ -4,14 +4,14 @@ declare(strict_types=1);
 namespace App\Tests\Unit\Acme\Games\Application\UseCases;
 
 use App\Acme\Games\Application\UseCases\StartGameUseCase;
-use App\Acme\Games\Domain\Entities\Game;
+use App\Acme\Games\Domain\Models\Game;
 use App\Acme\Games\Domain\Events\StartGameEvent;
 use App\Acme\Games\Domain\Exceptions\UserNotFound;
 use App\Acme\Games\Domain\Repositories\GameRepository;
 use App\Acme\Games\Domain\Repositories\UserRepository;
 use App\Shared\Domain\Bus\Event\EventBus;
 use App\Tests\ObjectMothers\Acme\Games\Application\Requests\StartGameRequestMother;
-use App\Tests\ObjectMothers\Acme\Games\Domain\Entities\GameMother;
+use App\Tests\ObjectMothers\Acme\Games\Domain\Models\GameMother;
 use PHPUnit\Framework\TestCase;
 use Prophecy\Argument;
 use Prophecy\PhpUnit\ProphecyTrait;

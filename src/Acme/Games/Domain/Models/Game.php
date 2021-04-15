@@ -1,12 +1,12 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Acme\Games\Domain\Entities;
+namespace App\Acme\Games\Domain\Models;
 
 
 use App\Acme\Games\Domain\Events\StartGameEvent;
 use App\Acme\Games\Domain\Exceptions\UserCantMove;
-use App\Acme\Shared\Domain\Entities\GameId;
+use App\Acme\Shared\Domain\Models\GameId;
 use App\Shared\Domain\Aggregate\AggregateRoot;
 
 final class Game extends AggregateRoot

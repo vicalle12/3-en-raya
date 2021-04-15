@@ -5,12 +5,12 @@ namespace App\Tests\Unit\Acme\Users\Application\UseCases;
 
 use App\Acme\Users\Application\Requests\CreateUserRequest;
 use App\Acme\Users\Application\UseCases\CreateUserUseCase;
-use App\Acme\Users\Domain\Entities\User;
+use App\Acme\Users\Domain\Models\User;
 use App\Acme\Users\Domain\Events\CreateUserEvent;
 use App\Acme\Users\Domain\Repositories\UserRepository;
 use App\Shared\Domain\Bus\Event\EventBus;
 use App\Tests\ObjectMothers\Acme\Users\Application\Requests\CreateUserRequestMother;
-use App\Tests\ObjectMothers\Acme\Users\Domain\Entities\UserMother;
+use App\Tests\ObjectMothers\Acme\Users\Domain\Models\UserMother;
 use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
 use Prophecy\Argument;

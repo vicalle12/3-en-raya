@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Tests\ObjectMothers\Acme\Games\Domain\Entities;
+namespace App\Tests\ObjectMothers\Acme\Games\Domain\Models;
 
 
-use App\Acme\Games\Domain\Entities\BoardPosition;
-use App\Acme\Games\Domain\Entities\UserMovement;
+use App\Acme\Games\Domain\Models\BoardPosition;
+use App\Acme\Games\Domain\Models\UserMovement;
 
 final class UserMovementMother
 {

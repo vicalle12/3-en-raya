@@ -4,8 +4,8 @@
 namespace App\Acme\Users\Domain\Repositories;
 
 
-use App\Acme\Shared\Domain\Entities\UserId;
-use App\Acme\Users\Domain\Entities\User;
+use App\Acme\Shared\Domain\Models\UserId;
+use App\Acme\Users\Domain\Models\User;
 
 interface UserRepository
 {

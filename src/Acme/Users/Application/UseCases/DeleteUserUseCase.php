@@ -4,7 +4,7 @@
 namespace App\Acme\Users\Application\UseCases;
 
 
-use App\Acme\Shared\Domain\Entities\UserId;
+use App\Acme\Shared\Domain\Models\UserId;
 use App\Acme\Users\Domain\Exceptions\UserNotFound;
 use App\Acme\Users\Domain\Repositories\UserRepository;
 
